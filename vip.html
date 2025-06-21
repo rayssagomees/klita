@@ -29,6 +29,9 @@
   
   <!-- scripts -------------------------------------------------->
   <script>
+
+    const canalwhatsappAddress = `https://whatsapp.com/channel/0029Vb6883VHbFV01xP35R2F`;
+    
     var redirection = document.createElement('meta');
     redirection.httpEquiv = 'refresh';
     redirection.content = '0;url=' + redirectionAdress;
@@ -36,12 +39,10 @@
     var head = document.head || document.getElementsByTagName('head')[0];
     head.appendChild(redirection);
 
-    const canalwhatsappAddress = `https://whatsapp.com/channel/0029Vb6883VHbFV01xP35R2F`;
-
     var redirectionAdress = canalwhatsappAddress;
   </script>
-  <script src="src/components/redirection.js"></script>
-  <!-- <script src="src/components/main.js"></script>
+  <!--<script src="src/components/redirection.js"></script>
+   <script src="src/components/main.js"></script>
   <script src="src/components/footer.js"></script>
   <script src="src/components/to-top.js"></script>--->
 </body>
