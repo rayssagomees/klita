@@ -1,10 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
+@import url('footer.css');
+@import url('onepage.css');
+
 
 * {
     padding: 0;
     border: 0;
     margin: 0;
+}
+
+::selection {
+    background-color: #e2c399;
+}
+
+/* Estilo da scrollbar */
+::-webkit-scrollbar {
+  width: 10px;              /* Largura da barra vertical */
+  height: 10px;             /* Altura da barra horizontal */
+}
+
+/* Fundo da scrollbar */
+::-webkit-scrollbar-track {
+  background: #fcf6ee;
+  border-radius: 10px;
+}
+
+/* Parte deslizante */
+::-webkit-scrollbar-thumb {
+  background: #e2c399;
+  border-radius: .2rem;
 }
 
 html {
@@ -16,49 +41,36 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.centering {
+a {
+    color: #3d0718;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+ a:hover {
+    text-decoration: underline;
+}
+
+.flex-center-column {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
+.flex-space-between-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
 #map {
     height: 300px;
+    /*filter: sepia(25%);*/
 }
 
 #map, #reviews {
-    width: 60vw;
-    border-radius: .4rem;
-    margin: 2.4rem;
-}
-
-ul {
-    display: flex;
-}
-
-li {
-    list-style: none;
-    font-size: .8rem;
-    padding: 0 0 1.6rem 1.6rem;
-}
-
-a, footer a {
-    text-decoration: none;
-    font-weight: 600;
-}
-
-a {
-    color: #3d0718;
-}
-
-footer a {
-    color: #fcf6ee;
-}
-
-footer {
-    background-color: #3d0718;
-    color: #fcf6ee;
-    font-size: .8rem;
-    padding: 2.4rem;
+    /*border-radius: .4rem;*/
+    margin: 2.4rem 0;
 }

@@ -1,15 +1,35 @@
-// Criação do footer
+// Criação do footer -------------------------------------------------------------------
 const footer = document.createElement('footer');
 
 const div = document.createElement('div');
-div.classList.add('centering');
+div.classList.add('flex-space-between-row');
 
+const divLeft = document.createElement('div');
+divLeft.classList.add('flex-space-between-row');
+
+const divRight = document.createElement('div');
+divRight.classList.add('flex-space-between-row');
+
+// Criação da logo -------------------------------------------------------------------
+
+const logo = document.createElement('img');
+logo.classList.add('logo')
+
+logo.src = 'src/image/klita-logo-white.png';
+logo.alt = 'Logo Klita';
+
+// Criação do copyright -------------------------------------------------------------------
+const copyright = document.createElement('div');
+
+const currentYear = new Date().getFullYear();
+copyright.innerHTML = `&copy; ${currentYear} Klita Brasil. Todos os direitos reservados.`; // CNPJ: 61.827.404/0001-48
+
+// Criação dos links -------------------------------------------------------------------
 const ul = document.createElement('ul');
 
 const links = [
-    { href: '/termos', text: 'Termos de Uso' },
-    { href: '/privacidade', text: 'Política de Privacidade' },
-    { href: '/ajuda', text: 'Central de Ajuda' }
+    { href: '/termos-de-uso', text: 'Termos' },
+    { href: '/politica-de-privacidade', text: 'Privacidade' },
 ];
 
 links.forEach(linkData => {
@@ -17,20 +37,18 @@ links.forEach(linkData => {
     const a = document.createElement('a');
     a.href = linkData.href;
     a.textContent = linkData.text;
+    a.target = '_blank';
     li.appendChild(a);
     ul.appendChild(li);
 });
 
-div.appendChild(ul);
+// Montagem final -------------------------------------------------------------------
+divLeft.appendChild(logo);
+divRight.appendChild(copyright);
+divRight.appendChild(ul);
+
+div.appendChild(divLeft);
+div.appendChild(divRight);
+
 footer.appendChild(div);
-
-// Criação do copyright
-const copyright = document.createElement('div');
-copyright.classList.add('centering');
-
-const currentYear = new Date().getFullYear();
-copyright.innerHTML = `&copy; ${currentYear} Klita. Todos os direitos reservados.`; // CNPJ: 61.827.404/0001-48
-
-// Adiciona tudo ao body
-footer.appendChild(copyright);
 document.body.appendChild(footer);

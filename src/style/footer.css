@@ -1,0 +1,33 @@
+
+footer {
+    background-color: #3d0718;
+    font-size: .8rem;
+    padding: 2.4rem;
+}
+
+footer, footer a {
+    color: #fcf6ee;
+}
+
+footer ul {
+    display: flex;
+    justify-content: right;
+}
+
+footer li {
+    list-style: none;
+    padding: 0 0 0 1.6rem;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: normal;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .logo {
+    width: 4rem;
+}
