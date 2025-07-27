@@ -18,6 +18,14 @@ logo.classList.add('logo')
 logo.src = 'src/image/klita-logo-white.png';
 logo.alt = 'Logo Klita';
 
+const home = document.createElement('a');
+
+home.href = '/';
+//home.textContent = linkData.text;
+home.target = '_blank';
+
+home.appendChild(logo);
+
 // Criação do copyright -------------------------------------------------------------------
 const copyright = document.createElement('div');
 
@@ -43,7 +51,7 @@ links.forEach(linkData => {
 });
 
 // Montagem final -------------------------------------------------------------------
-divLeft.appendChild(logo);
+divLeft.appendChild(home);
 divRight.appendChild(copyright);
 divRight.appendChild(ul);
 

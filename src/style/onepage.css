@@ -1,5 +1,9 @@
 /**/
 
+b {
+    color: #3d0718;
+}
+
 .main-one-page {
     width: 60vw;
     padding: 4rem 0;
@@ -17,7 +21,6 @@
 
 .main-one-page h1 {
     font-size: 3.6rem;
-    padding-bottom: 2rem;
 }
 
 .main-one-page h2 {
@@ -33,6 +36,6 @@
     font-weight: normal !important;
 }
 
-b {
-    color: #3d0718;
+.gray {
+    font-style: italic;
 }
