@@ -87,7 +87,21 @@ h1 {
 </head>
 <body class="animation-background flex-center-center">
 
-  <h1>EM BREVE</h1>
+ <!--  <h1>EM BREVE</h1>-->
+  
+  <!-- scripts -------------------------------------------------->
+
+  <script>
+    // Definindo o endereço para onde será redirecionado
+    const redirectionAdress = 'https://www.ifood.com.br/delivery/aragarcas-go/klita-brasil-vila-ceara/77e2b445-4c39-4aad-af1d-ecaf78d59850';
+
+    // Criando a meta tag de redirecionamento
+    const redirection = document.createElement('meta');
+    redirection.httpEquiv = 'refresh';
+    redirection.content = `0;url=${redirectionAdress}`;
+
+    document.head.appendChild(redirection);
+  </script>
 
 </body>
 </html>
